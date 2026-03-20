@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Brush, Terminal, Layers, Cloud, ChevronDown, CheckCircle } from 'lucide-react'
 import { clientProjects } from '@/data/projects'
+import { blogPosts } from '@/data/blog'
 import TiltCard from '@/components/TiltCard'
 // Animation variants
 const fadeInUp = {
@@ -243,27 +244,8 @@ export default function Home() {
             <Link href="#" className="text-on-surface font-bold text-xs uppercase tracking-widest border-b border-on-surface pb-1 font-headline">Read All Articles</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                title: "Rise of IT Industry in Nepal",
-                category: "Tech Trends",
-                desc: "Exploring the rapid digital transformation within the Himalayan tech hub.",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA_bi537TZuV_qLgrvy4aWLGAWIt_AD77Y-sbM0W_-e5ssCbzOuEwq2ilWc3Q7fv8ai2zFzXL-GdZwCleOSn-N1BpZI_dn41bGDkTBUY3nAi6Re5gVWFnBkHLaylrtj_ggCAv0M2S3mw6u0_x_rIbBqbZbcZz5qko2vav6WtZ2-9rj0DkNSPyZdZNikA0QZL06aNsLZMncIzSKnOFRzXoZHohnybc80Tmwt-XmWgLbpGoejBL3Id6Wf_QKkSeuoOhaYdf8B3VvKuDE"
-              },
-              {
-                title: "Why SaaS is the Future in South Asia",
-                category: "Business",
-                desc: "Scale-first strategies for emerging markets in the digital age.",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuD4XdvYvKHPDfkYEXpKwgoChCeB_AeQAghF3D3kGYP4O5gq0IrgvMBFQhQJ-aYu6mu8dWh44VKXi2oFmzmpBdsm4BR8UkXQwdBh8rVyYG3c8stmg30u5umbzCmdGChqqlQjLQiQtnCrkif8Uu4ebx8TIG5MlCJqTBtrTRrKHx7FcmahOT2jMNvxKHluMNbqLP0kTb_YfXRgmCNlIgYkOalmIgSEupSYIN3ynlirWqyTB3OwN4ayA1nxiRmmqZn-aDPF0CxKyBkLg_k"
-              },
-              {
-                title: "How Nepali Developers are Going Global",
-                category: "Community",
-                desc: "The journey of local talent conquering international digital benchmarks.",
-                image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCFfOHg63IS1zQgKhcXx2AynXjdQmmZJeTak3Cpl1VgMNSD1tXkvEBWLMy88DZ6J65IaregS9tb1g5SERB2P9UqRy80_OHwce-Y-w4qy5fZ47bAd16HfLQORNr7MG5UDWHgll44TeNamukFqHN8zddKFAEKvUSRfRyQ353rhAHzpLMSA6Zvjm59JkgAfC4bTK1RsUQbOo9ZoODysqI7TpAPPq6yymb4xG27aI0w8r4GxQYHVxtaif0xBvAHWCguYvonMQmvd9H2Onc"
-              }
-            ].map((insight) => (
-              <div key={insight.title} className="group cursor-pointer">
+            {blogPosts.map((insight, idx) => (
+              <Link href={`/blog/${insight.slug}`} key={insight.title} className="group cursor-pointer">
                 <div className="overflow-hidden rounded-xl mb-6 bg-black aspect-[4/3] border border-white/5 relative">
                   <Image
                     src={insight.image}
@@ -275,8 +257,8 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] uppercase tracking-[0.3em] text-primary mb-3 block font-bold font-headline">{insight.category}</span>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors font-headline">{insight.title}</h3>
-                <p className="text-secondary text-sm opacity-60 leading-relaxed font-body">{insight.desc}</p>
-              </div>
+                <p className="text-secondary text-sm opacity-60 leading-relaxed font-body line-clamp-2">{insight.excerpt}</p>
+              </Link>
             ))}
           </div>
         </div>

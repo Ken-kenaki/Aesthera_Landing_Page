@@ -5,10 +5,12 @@ import { useTheme } from '@/app/providers/ThemeProvider'
 import { Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
 const links = [
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/products', label: 'Products' },
-  { href: '/projects', label: 'Projects' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Products', href: '/products' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '/contact' },
 ]
 export default function Nav() {
   const pathname = usePathname()
@@ -37,22 +39,16 @@ export default function Nav() {
         <div className="hidden md:flex items-center space-x-12">
           {links.map((link) => (
             <Link
-              key={link.label}
+              key={link.name}
               href={link.href}
               className={`font-medium transition-all duration-300 uppercase tracking-widest text-xs ${pathname === link.href
                 ? 'text-primary font-bold border-b-2 border-primary pb-1'
                 : 'text-on-surface-variant hover:text-primary'
                 }`}
             >
-              {link.label}
+              {link.name}
             </Link>
           ))}
-          <Link href="/contact" className={`font-medium transition-all duration-300 uppercase tracking-widest text-xs ${pathname === '/contact'
-            ? 'text-primary font-bold border-b-2 border-primary pb-1'
-            : 'text-on-surface-variant hover:text-primary'
-            }`}>
-            Contact
-          </Link>
         </div>
         <div className="flex items-center gap-4">
           <button
