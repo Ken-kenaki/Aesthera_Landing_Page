@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /*
+       Aesthera Premium Light Palette
+       Clear, crisp, and professional.
+    */
+    --color-background: #ffffff;
+    --color-on-background: #0f172a;
+
+    --color-surface: #f8fafc;
+    --color-on-surface: #1e293b;
+    --color-surface-variant: #e2e8f0;
+    --color-on-surface-variant: #475569;
+
+    --color-primary: #1e293b;
+    --color-on-primary: #ffffff;
+    --primary-rgb: 30, 41, 59;
+    --secondary-rgb: 100, 116, 139;
+    --color-primary-container: #f1f5f9;
+    --color-on-primary-container: #0f172a;
+
+    --color-secondary: #64748b;
+    --color-on-secondary: #ffffff;
+
+    --color-outline: #cbd5e1;
+    --color-outline-variant: #e2e8f0;
+
+    --color-accent: #020617;
+  }
+
+  .dark {
+    /*
+       Aesthera Kinetic Dark Palette
+       Deep charcoal with premium metallic accents.
+    */
+    --color-background: #0a0a0c;
+    --color-on-background: #f8fafc;
+
+    --color-surface: #131316;
+    --color-on-surface: #e2e8f0;
+    --color-surface-variant: #1e1e24;
+    --color-on-surface-variant: #94a3b8;
+
+    --color-primary: #ffffff;
+    --color-on-primary: #0a0a0c;
+    --primary-rgb: 255, 255, 255;
+    --secondary-rgb: 148, 163, 184;
+    --color-primary-container: #1e293b;
+    --color-on-primary-container: #f8fafc;
+
+    --color-secondary: #94a3b8;
+    --color-on-secondary: #0a0a0c;
+
+    --color-outline: #334155;
+    --color-outline-variant: #1e293b;
+
+    --color-accent: #ffffff;
+  }
+
+  body {
+    color: var(--color-on-background);
+    background: var(--color-background);
+    font-family: var(--font-jakarta), sans-serif;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .monolith-text {
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+  }
+
+  .glass-nav {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dark .glass-card {
+    background: rgba(10, 10, 12, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .crystal-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .crystal-glass::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+        transparent 0%,
+        rgba(var(--primary-rgb), 0.05) 50%,
+        transparent 100%);
+    animation: crystal-shimmer 8s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes crystal-shimmer {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .dark .crystal-glass {
+    background: rgba(10, 10, 12, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .neon-glow-primary {
+    box-shadow:
+      0 0 10px rgba(56, 189, 248, 0.8),
+      0 0 20px rgba(56, 189, 248, 0.4),
+      0 0 40px rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .dark .neon-glow-primary {
+    box-shadow:
+      0 0 15px rgba(56, 189, 248, 0.9),
+      0 0 30px rgba(56, 189, 248, 0.6),
+      0 0 60px rgba(56, 189, 248, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .neon-glow-primary:hover {
+    box-shadow:
+      0 0 25px rgba(56, 189, 248, 1),
+      0 0 50px rgba(56, 189, 248, 0.7),
+      0 0 100px rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .kinetic-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #ffffff;
+  }
+
+  .dark .kinetic-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    color: #0f172a;
+  }
+
+  .text-glow:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .theme-transition {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .premium-transition {
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+/* Custom Scrollbar from code.html request */
+:root {
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #000000;
+  --scrollbar-thumb-hover: #333333;
+}
+
+.dark {
+  --scrollbar-thumb: #ffffff;
+  --scrollbar-thumb-hover: #cccccc;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
