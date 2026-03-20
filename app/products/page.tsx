@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { saasProducts } from '@/data/products'
 import Link from 'next/link'
+import { useState } from 'react'
+import { clsx } from 'clsx'
 
 export default function Products() {
   const images = [
@@ -11,6 +13,13 @@ export default function Products() {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuA_bi537TZuV_qLgrvy4aWLGAWIt_AD77Y-sbM0W_-e5ssCbzOuEwq2ilWc3Q7fv8ai2zFzXL-GdZwCleOSn-N1BpZI_dn41bGDkTBUY3nAi6Re5gVWFnBkHLaylrtj_ggCAv0M2S3mw6u0_x_rIbBqbZbcZz5qko2vav6WtZ2-9rj0DkNSPyZdZNikA0QZL06aNsLZMncIzSKnOFRzXoZHohnybc80Tmwt-XmWgLbpGoejBL3Id6Wf_QKkSeuoOhaYdf8B3VvKuDE",
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCFfOHg63IS1zQgKhcXx2AynXjdQmmZJeTak3Cpl1VgMNSD1tXkvEBWLMy88DZ6J65IaregS9tb1g5SERB2P9UqRy80_OHwce-Y-w4qy5fZ47bAd16HfLQORNr7MG5UDWHgll44TeNamukFqHN8zddKFAEKvUSRfRyQ353rhAHzpLMSA6Zvjm59JkgAfC4bTK1RsUQbOo9ZoODysqI7TpAPPq6yymb4xG27aI0w8r4GxQYHVxtaif0xBvAHWCguYvonMQmvd9H2Onc"
   ]
+  const [filter, setFilter] = useState('All')
+
+  const filteredProducts = filter === 'All' 
+    ? saasProducts 
+    : saasProducts.filter(product => product.category === filter)
+  
+  const categories = ['All', 'Business', 'Gaming', 'Education', 'Fitness']
 
   return (
     <div className="bg-transparent text-on-background font-body selection:bg-primary selection:text-on-primary min-h-screen">
@@ -26,14 +35,24 @@ export default function Products() {
             Our Products
           </h1>
           <div className="flex flex-wrap justify-center gap-4 font-headline uppercase">
-            <button className="px-6 py-2 rounded-full border border-on-surface bg-on-surface text-surface font-bold text-xs uppercase tracking-widest">All Products</button>
-            <button className="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:border-on-surface hover:text-on-surface transition-colors">SaaS</button>
-            <button className="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:border-on-surface hover:text-on-surface transition-colors">Gaming</button>
-            <button className="px-6 py-2 rounded-full border border-outline text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:border-on-surface hover:text-on-surface transition-colors">Education</button>
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={clsx(
+                  "px-6 py-2 rounded-full border font-bold text-xs uppercase tracking-widest transition-colors",
+                  filter === cat
+                    ? "border-on-surface bg-on-surface text-surface"
+                    : "border-outline text-on-surface-variant hover:border-on-surface hover:text-on-surface"
+                )}
+              >
+                {cat === 'All' ? 'All Products' : cat}
+              </button>
+            ))}
           </div>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-          {saasProducts.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <motion.div
               key={product.id}
               className="relative group aspect-square overflow-hidden bg-black border border-white/5"

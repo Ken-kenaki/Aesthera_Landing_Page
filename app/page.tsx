@@ -115,7 +115,7 @@ export default function Home() {
               <div className="relative h-full overflow-hidden bg-surface rounded-2xl p-12 border border-outline/5 transition-colors hover:bg-surface-variant flex flex-col justify-end">
                 <div className="absolute inset-0 w-full h-full opacity-40 group-hover:opacity-60 transition-all duration-1000">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDfKL9Z0RojYOF1ChKccM7m9HR_5tzJanhm2E79SbNv7L8lHW4xb8IhOA9YcuJENWRxm6-Fv4sxnbv5K0UpfBlK-VupJYb1XMeowUcDFn6jJWKuI4V6zOcieQeTDEEu5gdCiJbuzE_C--HshF7RV82dsCqATwYv4IVMOJHfTazTe6Ow4F7Pq4370wbEVW1sAHVQzLB1-XqdBsPv-L6lztqUjAF6oKNquURWuscqEgjkZ3izIU4CFGje0GrdcbFd3V-I4sriCsRgRQ"
+                    src="/gymo.png"
                     alt="Fitness dashboard interface"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
@@ -256,7 +256,7 @@ export default function Home() {
                   />
                 </div>
                 <span className="text-[10px] uppercase tracking-[0.3em] text-primary mb-3 block font-bold font-headline">{insight.category}</span>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors font-headline">{insight.title}</h3>
+                <h3 className="text-xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors font-headline">{insight.title}</h3>
                 <p className="text-secondary text-sm opacity-60 leading-relaxed font-body line-clamp-2">{insight.excerpt}</p>
               </Link>
             ))}
@@ -268,7 +268,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>
-              <h2 className="text-6xl font-black tracking-tighter text-white uppercase mb-8 font-headline">Start a <br /> <span className="text-outline">Project.</span></h2>
+              <h2 className="text-6xl font-black tracking-tighter text-on-surface uppercase mb-8 font-headline">Start a <br /> <span className="text-outline">Project.</span></h2>
               <p className="text-secondary mb-12 opacity-60 text-lg font-body">Ready to build something unshakeable? Drop us a line and let's manifest your digital vision.</p>
               <div className="space-y-8 font-headline">
                 <div>
@@ -285,15 +285,15 @@ export default function Home() {
               <form className="space-y-8">
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest text-secondary font-bold mb-2 font-headline">Full Name</label>
-                  <input className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-white transition-all placeholder:text-outline-variant focus:outline-none" placeholder="John Doe" type="text" />
+                  <input className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-on-surface transition-all placeholder:text-outline-variant focus:outline-none" placeholder="John Doe" type="text" />
                 </div>
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest text-secondary font-bold mb-2 font-headline">Email Address</label>
-                  <input className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-white transition-all placeholder:text-outline-variant focus:outline-none" placeholder="john@example.com" type="email" />
+                  <input className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-on-surface transition-all placeholder:text-outline-variant focus:outline-none" placeholder="john@example.com" type="email" />
                 </div>
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest text-secondary font-bold mb-2 font-headline">Message</label>
-                  <textarea className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-white transition-all placeholder:text-outline-variant focus:outline-none" placeholder="Tell us about your mission..." rows={4}></textarea>
+                  <textarea className="w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary text-on-surface transition-all placeholder:text-outline-variant focus:outline-none" placeholder="Tell us about your mission..." rows={4}></textarea>
                 </div>
                 <button className="w-full kinetic-gradient text-on-primary py-5 font-bold uppercase tracking-[0.2em] text-xs hover:scale-[1.02] transition-transform duration-300 font-headline">
                   Send Transmission

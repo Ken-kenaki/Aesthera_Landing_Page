@@ -114,7 +114,7 @@ export default function Contact() {
       <section className="max-w-screen-2xl mx-auto px-8 mt-32 mb-24">
         <div className="flex flex-col md:flex-row md:items-start gap-12 lg:gap-32">
           <div className="md:w-1/3">
-            <h2 className="text-4xl font-black font-headline text-white tracking-tighter uppercase mb-6">FAQ</h2>
+            <h2 className="text-4xl font-black font-headline text-on-surface tracking-tighter uppercase mb-6">FAQ</h2>
             <p className="text-on-surface-variant text-sm leading-relaxed max-w-xs">
               Common operational protocols for project initiation and collaborative workflows.
             </p>
@@ -127,7 +127,7 @@ export default function Contact() {
               { q: "Next Steps?", a: "After transmission, our lead architect will reach out within 24 hours for a discovery sync." }
             ].map((faq) => (
               <div key={faq.q}>
-                <h4 className="text-white font-bold mb-3 font-headline text-lg">{faq.q}</h4>
+                <h4 className="text-on-surface font-bold mb-3 font-headline text-lg">{faq.q}</h4>
                 <p className="text-on-surface-variant text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}

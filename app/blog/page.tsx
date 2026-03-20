@@ -17,7 +17,7 @@ export default function Blog() {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="text-secondary/60 font-label tracking-[0.4em] uppercase text-xs mb-6 block">Deep Insights</span>
-                        <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter text-white leading-[0.9] max-w-4xl mb-12">
+                        <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-background leading-[0.9] max-w-4xl mb-12">
                             The Kinetic <br /><span className="text-primary/40">Chronicle</span>
                         </h1>
                         <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl leading-relaxed opacity-80">
@@ -62,7 +62,7 @@ export default function Blog() {
                                         <span className="flex items-center gap-1.5"><User className="w-3 h-3" /> {post.author.name}</span>
                                     </div>
 
-                                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors font-headline leading-tight">
+                                    <h3 className="text-2xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors font-headline leading-tight">
                                         {post.title}
                                     </h3>
 
@@ -72,7 +72,7 @@ export default function Blog() {
 
                                     <Link
                                         href={`/blog/${post.slug}`}
-                                        className="inline-flex items-center gap-2 text-white font-bold uppercase tracking-widest text-[10px] group/link"
+                                        className="inline-flex items-center gap-2 text-on-surface font-bold uppercase tracking-widest text-[10px] group/link"
                                     >
                                         Read Transmission
                                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-2 transition-transform duration-300" />

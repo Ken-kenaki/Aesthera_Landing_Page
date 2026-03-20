@@ -9,7 +9,7 @@ export default function Footer() {
             { label: 'Privacy Policy', href: '/privacy' },
             { label: 'Terms of Service', href: '/terms' },
             { label: 'Blog', href: '/blog' },
-            { label: 'LinkedIn', href: '#' },
+            { label: 'LinkedIn', href: 'https://www.linkedin.com/company/aesthera-limited/' },
             { label: 'Dribbble', href: '#' }
           ].map((link) => (
             <Link
@@ -22,7 +22,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="text-neutral-500 dark:text-neutral-600 font-body text-xs uppercase tracking-widest text-center">
-          © 2026 Aesthera Limited. Crafted for the Kinetic Monolith.
+          © 2026 Aesthera Limited.
         </p>
       </div>
     </footer>
