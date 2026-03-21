@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useTheme } from '@/app/providers/ThemeProvider'
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun, Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 const links = [
   { name: 'About', href: '/about' },
@@ -17,6 +17,8 @@ export default function Nav() {
   const { theme, toggleTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   useEffect(() => {
     setMounted(true)
     const handleScroll = () => {
@@ -60,12 +62,47 @@ export default function Nav() {
           </button>
           <Link
             href="/contact"
-            className="kinetic-gradient text-on-primary px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-sm active:scale-95 duration-200 ease-out neon-glow-primary transition-all"
+            className="hidden md:block kinetic-gradient text-on-primary px-6 py-2.5 text-xs font-bold uppercase tracking-widest rounded-sm active:scale-95 duration-200 ease-out neon-glow-primary transition-all"
           >
             Start Project
           </Link>
+
+          <button
+            className="md:hidden p-2 text-on-surface hover:bg-on-surface/5 rounded-full transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-xl border-t border-on-surface/10 shadow-2xl transition-all duration-300 ease-in-out">
+          <div className="flex flex-col p-6 space-y-6">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-sm font-bold tracking-widest uppercase transition-colors ${
+                  pathname === link.href ? 'text-primary' : 'text-on-surface hover:text-primary'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="kinetic-gradient text-on-primary px-6 py-3 text-center text-sm font-bold uppercase tracking-widest rounded-sm neon-glow-primary"
+            >
+              Start Project
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
