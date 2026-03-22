@@ -58,7 +58,7 @@ export default function Services() {
                   <span className="text-xs uppercase tracking-widest text-primary/60">Response Latency</span>
                 </div>
               </div>
-              <Link href="#" className="inline-flex items-center gap-2 text-on-surface font-bold group">
+              <Link href="/services/web-design-development" className="inline-flex items-center gap-2 text-on-surface font-bold group">
                 Explore Capability
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -150,7 +150,7 @@ export default function Services() {
                   <span className="text-sm font-medium">Unified Cross-Platform Logic</span>
                 </div>
               </div>
-              <Link href="#" className="inline-flex items-center gap-2 text-on-surface font-bold group">
+              <Link href="/services/app-development" className="inline-flex items-center gap-2 text-on-surface font-bold group">
                 View Ecosystems
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
