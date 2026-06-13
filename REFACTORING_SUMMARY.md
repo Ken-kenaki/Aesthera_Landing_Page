@@ -47,7 +47,7 @@ Created comprehensive `/data/projects.ts` with 6 client projects:
 - ✅ Gurukul Education (https://www.gurukuleduc.com/) - EdTech, Featured
 - ✅ NextGen Advisors (https://nextgenadvisors.com.np/) - Financial Services, Featured
 - ✅ Joe Un Education Consultancy (https://joeuneducationconsultancy.com/)
-- ✅ UDEF CMS (https://cms.udef.com.np/) - Custom Consultancy CRM
+- ✅ UDEF CMS (https://crm.aesthera.com.np/) - Custom Consultancy CRM
 - ✅ Fairmount Education Consultancy (https://fairmounteducationconsultancy.org/)
 - ✅ Better Days Marketplace (https://www.betterdaysmarketplace.com/) - Shopify Pet Store
 

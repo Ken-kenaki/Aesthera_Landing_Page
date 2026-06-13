@@ -49,7 +49,7 @@ export default function Blog() {
                                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                     <div className="absolute top-4 left-4">
-                                        <span className="bg-background/80 backdrop-blur-md text-primary text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-bold border border-white/10">
+                                        <span className="bg-background/80 backdrop-blur-md text-primary text-[10px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full font-bold border border-outline/20">
                                             {post.category}
                                         </span>
                                     </div>

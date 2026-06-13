@@ -1,8 +1,12 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTheme } from '@/app/providers/ThemeProvider'
 
 export default function BackgroundGlow() {
+    const { theme } = useTheme()
+    const isDark = theme === 'dark'
+
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10 bg-background">
             {/* Primary Glow Blob - Cyan/Blue */}
@@ -10,7 +14,7 @@ export default function BackgroundGlow() {
                 className="absolute top-[-20%] left-[-20%] w-[80%] h-[80%] rounded-full blur-[150px]"
                 animate={{
                     scale: [1, 1.15, 1],
-                    opacity: [0.35, 0.6, 0.35],
+                    opacity: isDark ? [0.25, 0.45, 0.25] : [0.05, 0.1, 0.05],
                     background: 'radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, transparent 60%)',
                 }}
                 transition={{
@@ -25,7 +29,7 @@ export default function BackgroundGlow() {
                 className="absolute bottom-[-20%] right-[-20%] w-[70%] h-[70%] rounded-full blur-[130px]"
                 animate={{
                     scale: [1, 1.25, 1],
-                    opacity: [0.25, 0.5, 0.25],
+                    opacity: isDark ? [0.18, 0.35, 0.18] : [0.04, 0.08, 0.04],
                     background: 'radial-gradient(circle, rgba(168, 85, 247, 0.7) 0%, transparent 60%)',
                 }}
                 transition={{
@@ -41,7 +45,7 @@ export default function BackgroundGlow() {
                 className="absolute top-[30%] right-[-15%] w-[40%] h-[40%] rounded-full blur-[100px]"
                 animate={{
                     scale: [1, 1.4, 1],
-                    opacity: [0.2, 0.45, 0.2],
+                    opacity: isDark ? [0.15, 0.3, 0.15] : [0.03, 0.06, 0.03],
                     background: 'radial-gradient(circle, rgba(236, 72, 153, 0.6) 0%, transparent 60%)',
                 }}
                 transition={{

@@ -59,7 +59,7 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="relative group aspect-square overflow-hidden bg-black border border-white/5"
+              className="relative group aspect-square overflow-hidden bg-background border border-outline/10"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

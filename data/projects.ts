@@ -52,7 +52,7 @@ export const clientProjects: ClientProject[] = [
     id: 'udef-cms',
     name: 'UDEF CMS',
     description: 'Custom consultancy CRM built specifically for education sector consultancy workflows.',
-    url: 'https://cms.udef.com.np/',
+    url: 'https://crm.aesthera.com.np/',
     category: 'CRM/Business',
     industry: 'Education Consultancy',
   },

@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
         slug: "rise-of-it-industry-nepal",
         title: "The Kinetic Rise of IT in Nepal",
         category: "Tech Trends",
-        date: "March 15, 2024",
+        date: "March 15, 2026",
         excerpt: "Exploring the rapid digital transformation within the Himalayan tech hub and how it's becoming a global contender.",
         content: `
       <p>Nepal's IT sector is no longer just a local phenomenon; it's a growing global force. From software outsourcing to indigenous product development, the landscape is shifting with kinetic energy.</p>
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
         slug: "saas-future-south-asia",
         title: "SaaS: The Architecture of South Asia's Future",
         category: "Business",
-        date: "March 10, 2024",
+        date: "March 10, 2026",
         excerpt: "Scale-first strategies for emerging markets in the digital age. Why SaaS is the key to unlocking regional potential.",
         content: `
       <p>Software as a Service (SaaS) is redefining how businesses operate in South Asia. By lowering the barrier to entry for enterprise-grade tools, SaaS is empowering a new wave of MSMEs.</p>
@@ -63,7 +63,7 @@ export const blogPosts: BlogPost[] = [
         slug: "monolithism-in-design",
         title: "The Aesthetics of Kinetic Monolithism",
         category: "Design",
-        date: "March 05, 2024",
+        date: "March 05, 2026",
         excerpt: "How we balance architectural permanence with digital fluidity in modern UI/UX design.",
         content: `
       <p>Design at Aesthera is driven by a singular concept: Kinetic Monolithism. It's the intersection of structural heaviness and digital lightness.</p>

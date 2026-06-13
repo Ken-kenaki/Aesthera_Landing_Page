@@ -246,7 +246,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {blogPosts.map((insight, idx) => (
               <Link href={`/blog/${insight.slug}`} key={insight.title} className="group cursor-pointer">
-                <div className="overflow-hidden rounded-xl mb-6 bg-black aspect-[4/3] border border-white/5 relative">
+                <div className="overflow-hidden rounded-xl mb-6 bg-surface-container aspect-[4/3] border border-outline/10 relative">
                   <Image
                     src={insight.image}
                     alt={insight.title}
@@ -281,7 +281,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-surface-container-high p-12 rounded-xl border border-white/5 font-body">
+            <div className="bg-surface-container-high p-12 rounded-xl border border-outline/10 font-body">
               <form className="space-y-8">
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest text-secondary font-bold mb-2 font-headline">Full Name</label>

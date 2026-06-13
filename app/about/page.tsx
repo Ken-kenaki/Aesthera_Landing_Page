@@ -18,7 +18,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="col-span-12 lg:col-span-8"
           >
-            <span className="block text-secondary uppercase tracking-[0.4em] mb-6 font-medium text-sm">Founded in Nepal & UK</span>
+            <span className="block text-secondary uppercase tracking-[0.4em] mb-6 font-medium text-sm">Established April 4, 2025</span>
             <h1 className="font-headline text-6xl md:text-8xl lg:text-[10rem] font-extrabold leading-[0.85] tracking-tighter text-on-background mb-12">
               Architecture <br /> of the Future
             </h1>
@@ -30,7 +30,7 @@ export default function About() {
             className="col-span-12 lg:col-span-4 lg:pl-12"
           >
             <p className="text-xl md:text-2xl text-on-surface-variant leading-relaxed font-light">
-              Founded in the principle of Kinetic Monolithism, Aesthera Limited delivers digital infrastructures that remain unshakeable while adapting to the rapid currents of technological change.
+              Launched on April 4, 2025, and founded on the principles of Kinetic Monolithism, Aesthera Limited delivers digital infrastructures that remain unshakeable while adapting to the rapid currents of technological change.
             </p>
           </motion.div>
         </div>
@@ -98,29 +98,29 @@ export default function About() {
             {/* Milestone 1 */}
             <div className="relative flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-[45%] mb-8 md:mb-0 text-left md:text-right">
-                <h4 className="font-headline text-3xl font-bold text-on-surface">The Founding</h4>
-                <p className="text-on-surface-variant">Inception of the Kinetic Monolith philosophy in Kathmandu and London.</p>
+                <h4 className="font-headline text-3xl font-bold text-on-surface">The Genesis</h4>
+                <p className="text-on-surface-variant">Founded in Kathmandu and London, establishing the Kinetic Monolith philosophy.</p>
               </div>
               <div className="absolute left-[-4px] md:left-1/2 w-2 h-2 bg-primary rounded-full transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(var(--color-primary-rgb),0.8)]"></div>
-              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 md:text-left">2018</div>
+              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 md:text-left">April 2025</div>
             </div>
             {/* Milestone 2 */}
             <div className="relative flex flex-col md:flex-row-reverse items-center justify-between">
               <div className="md:w-[45%] mb-8 md:mb-0">
-                <h4 className="font-headline text-3xl font-bold text-on-surface">Global Expansion</h4>
-                <p className="text-on-surface-variant">Standardizing delivery protocols for international scale.</p>
+                <h4 className="font-headline text-3xl font-bold text-on-surface">Ecosystem Launch</h4>
+                <p className="text-on-surface-variant">Deploying our core SaaS products and standardizing client delivery protocols.</p>
               </div>
               <div className="absolute left-[-4px] md:left-1/2 w-2 h-2 bg-primary rounded-full transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(var(--color-primary-rgb),0.8)]"></div>
-              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 text-right">2021</div>
+              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 text-right">Late 2025</div>
             </div>
             {/* Milestone 3 */}
             <div className="relative flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-[45%] mb-8 md:mb-0 text-left md:text-right">
                 <h4 className="font-headline text-3xl font-bold text-on-surface">Aesthera 2.0</h4>
-                <p className="text-on-surface-variant">Rebranding to reflect architectural permanence and digital agility.</p>
+                <p className="text-on-surface-variant">Scaling architecture and expanding global operations for international enterprise partners.</p>
               </div>
               <div className="absolute left-[-4px] md:left-1/2 w-2 h-2 bg-primary rounded-full transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(var(--color-primary-rgb),0.8)]"></div>
-              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 md:text-left">2024</div>
+              <div className="md:w-[45%] font-headline text-5xl font-black text-outline/20 md:text-left">2026</div>
             </div>
           </div>
         </div>

@@ -78,7 +78,7 @@ export default function ServicePage() {
               <h2 className="font-headline text-3xl font-bold text-on-surface mb-8">Key Capabilities</h2>
               <div className="grid grid-cols-1 gap-4">
                 {service.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-surface-container rounded-lg border border-white/5">
+                  <div key={index} className="flex items-center gap-4 p-4 bg-surface-container rounded-lg border border-outline/10">
                     <CheckCircle2 className="text-primary shrink-0" size={20} />
                     <span className="text-on-surface font-medium">{feature}</span>
                   </div>
@@ -97,14 +97,14 @@ export default function ServicePage() {
                {service.stats && service.stats.length > 0 ? (
                  <div className="grid grid-cols-2 gap-6 mb-12">
                    {service.stats.map((stat, idx) => (
-                     <div key={idx} className="p-8 bg-surface-container-highest rounded-xl border border-white/5">
+                     <div key={idx} className="p-8 bg-surface-container-highest rounded-xl border border-outline/10">
                        <span className="block text-4xl font-headline font-bold text-on-surface mb-2">{stat.value}</span>
                        <span className="text-sm uppercase tracking-widest text-primary/60">{stat.label}</span>
                      </div>
                    ))}
                  </div>
                ) : (
-                  <div className="p-8 bg-surface-container-test rounded-xl border border-white/5 mb-12">
+                  <div className="p-8 bg-surface-container-test rounded-xl border border-outline/10 mb-12">
                      <Icon className="w-16 h-16 text-primary mb-6" />
                      <h3 className="text-xl font-bold text-on-surface mb-2">Ready to Deploy?</h3>
                      <p className="text-on-surface-variant">

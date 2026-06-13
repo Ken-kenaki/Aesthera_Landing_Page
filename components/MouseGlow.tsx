@@ -27,7 +27,7 @@ export default function MouseGlow() {
                 x,
                 y,
             }}
-            className="fixed top-0 left-0 w-[200px] h-[200px] rounded-full pointer-events-none z-[9999] opacity-90 dark:opacity-60 blur-[60px]"
+            className="fixed top-0 left-0 w-[200px] h-[200px] rounded-full pointer-events-none z-[9999] opacity-20 dark:opacity-40 blur-[60px]"
             animate={{
                 background: [
                     'radial-gradient(circle, rgba(56, 189, 248, 0.7) 0%, transparent 70%)',

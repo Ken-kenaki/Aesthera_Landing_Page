@@ -81,7 +81,7 @@ export default function Services() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-surface-dim to-transparent opacity-60"></div>
                 <div className="absolute bottom-8 left-8">
-                  <div className="glass-card p-4 rounded-lg flex items-center gap-4 border border-white/5">
+                  <div className="glass-card p-4 rounded-lg flex items-center gap-4">
                     <Monitor className="text-on-surface" />
                     <span className="text-sm font-label text-on-surface/80">Dynamic Viewport Logic</span>
                   </div>
@@ -141,11 +141,11 @@ export default function Services() {
                 Cross-platform mobile applications engineered for the modern user ecosystem. We leverage native-level performance with unified codebases for maximum market velocity.
               </p>
               <div className="space-y-4 mb-10">
-                <div className="flex items-center gap-4 p-4 border border-white/5 rounded-lg bg-surface-container-low">
+                <div className="flex items-center gap-4 p-4 border border-outline/10 rounded-lg bg-surface-container-low">
                   <Terminal className="text-primary" />
                   <span className="text-sm font-medium">Native Performance Optimization</span>
                 </div>
-                <div className="flex items-center gap-4 p-4 border border-white/5 rounded-lg bg-surface-container-low">
+                <div className="flex items-center gap-4 p-4 border border-outline/10 rounded-lg bg-surface-container-low">
                   <RefreshCw className="text-primary" />
                   <span className="text-sm font-medium">Unified Cross-Platform Logic</span>
                 </div>
@@ -170,43 +170,43 @@ export default function Services() {
               <h2 className="font-headline text-5xl font-bold text-on-surface mb-4">UI/UX Design</h2>
               <p className="text-on-surface-variant">User-centric design systems that balance aesthetic beauty with functional logic.</p>
             </div>
-            <div className="bg-primary/5 p-8 rounded-xl border border-white/5">
+            <div className="bg-primary/5 p-8 rounded-xl border border-primary/10">
               <span className="block text-4xl font-headline font-black text-on-surface">98%</span>
               <span className="text-xs uppercase tracking-widest text-primary/60">User Retention Rate</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 glass-card p-12 rounded-xl border border-white/5 relative overflow-hidden group">
+            <div className="md:col-span-2 glass-card p-12 rounded-xl relative overflow-hidden group">
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <h3 className="text-2xl font-bold text-on-surface mb-4">Visual Language Systems</h3>
                 <p className="text-on-surface-variant max-w-md">Developing atomic design principles that scale across global digital touchpoints without losing brand integrity.</p>
                 <div className="mt-12 flex gap-4">
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center">
                     <Palette className="text-on-surface" />
                   </div>
-                  <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full border border-outline/30 flex items-center justify-center">
                     <Grid className="text-on-surface" />
                   </div>
                 </div>
               </div>
               <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500"></div>
             </div>
-            <div className="bg-surface-container-highest p-12 rounded-xl border border-white/5">
+            <div className="bg-surface-container-highest p-12 rounded-xl border border-outline/10">
               <MousePointerClick className="w-10 h-10 text-primary mb-6" />
               <h3 className="text-xl font-bold text-on-surface mb-4">Behavioral Science</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">Mapping cognitive friction to create seamless navigational flows that guide users toward conversion effortlessly.</p>
             </div>
-            <div className="bg-surface-container-highest p-12 rounded-xl border border-white/5">
+            <div className="bg-surface-container-highest p-12 rounded-xl border border-outline/10">
               <Brain className="w-10 h-10 text-primary mb-6" />
               <h3 className="text-xl font-bold text-on-surface mb-4">Experience Audits</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">Deep-dive analysis of existing platforms to identify and eliminate structural inefficiencies.</p>
             </div>
-            <div className="md:col-span-2 bg-gradient-to-br from-surface-container-highest to-surface-dim p-12 rounded-xl border border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="md:col-span-2 bg-gradient-to-br from-surface-container-highest to-surface-dim p-12 rounded-xl border border-outline/10 flex flex-col md:flex-row justify-between items-center gap-8">
               <div>
                 <h3 className="text-2xl font-bold text-on-surface mb-2">Kinetic Motion Design</h3>
                 <p className="text-on-surface-variant">Adding the dimension of time to your interfaces.</p>
               </div>
-              <button className="px-8 py-3 border border-white/20 rounded-lg hover:bg-white/5 transition-colors font-bold text-sm text-on-surface">Review Showreel</button>
+              <button className="px-8 py-3 border border-outline/30 rounded-lg hover:bg-on-surface/5 transition-colors font-bold text-sm text-on-surface">Review Showreel</button>
             </div>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Services() {
               </div>
             </div>
             <div className="lg:w-1/2 relative">
-              <div className="relative z-10 glass-card p-2 rounded-2xl border border-white/5">
+              <div className="relative z-10 glass-card p-2 rounded-2xl">
                 <div className="bg-surface-container-lowest rounded-xl p-8">
                   <div className="flex justify-between items-center mb-12">
                     <div className="flex gap-2">
@@ -259,11 +259,11 @@ export default function Services() {
                   <div className="space-y-6">
                     <div className="h-4 bg-primary/10 rounded w-3/4"></div>
                     <div className="grid grid-cols-3 gap-4">
-                      <div className="h-24 bg-surface-container-high rounded-lg border border-white/5"></div>
-                      <div className="h-24 bg-surface-container-high rounded-lg border border-white/5"></div>
+                      <div className="h-24 bg-surface-container-high rounded-lg border border-outline/10"></div>
+                      <div className="h-24 bg-surface-container-high rounded-lg border border-outline/10"></div>
                       <div className="h-24 bg-primary/5 rounded-lg border border-primary/20"></div>
                     </div>
-                    <div className="h-32 bg-surface-container-high rounded-lg border border-white/5"></div>
+                    <div className="h-32 bg-surface-container-high rounded-lg border border-outline/10"></div>
                   </div>
                 </div>
               </div>
@@ -275,7 +275,7 @@ export default function Services() {
       </section>
       {/* CTA Section */}
       <section className="py-24 px-8">
-        <div className="max-w-5xl mx-auto glass-card p-16 rounded-[2rem] border border-white/5 text-center relative overflow-hidden">
+        <div className="max-w-5xl mx-auto glass-card p-16 rounded-[2rem] text-center relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-6">Ready to build the monolith?</h2>
             <p className="text-on-surface-variant mb-10 text-lg max-w-xl mx-auto">Join the ecosystem of forward-thinking brands leveraging Aesthera's kinetic digital infrastructure.</p>
@@ -283,7 +283,7 @@ export default function Services() {
               <button className="kinetic-gradient text-on-primary px-10 py-4 font-bold rounded-lg hover:scale-105 transition-transform duration-300">
                 Start Your Project
               </button>
-              <button className="px-10 py-4 border border-white/10 text-on-surface font-bold rounded-lg hover:bg-white/5 transition-colors">
+              <button className="px-10 py-4 border border-outline/30 text-on-surface font-bold rounded-lg hover:bg-on-surface/5 transition-colors">
                 Technical Documentation
               </button>
             </div>
