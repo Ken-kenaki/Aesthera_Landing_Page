@@ -36,8 +36,8 @@ export const clientProjects: ClientProject[] = [
     name: 'NextGen Advisors',
     description: 'Financial advisory and consulting services for modern enterprises and startups.',
     url: 'https://nextgenadvisors.com.np/',
-    category: 'Finance',
-    industry: 'Financial Services',
+    category: 'Education',
+    industry: 'Education Consultancy',
     featured: true,
   },
   {
@@ -49,12 +49,22 @@ export const clientProjects: ClientProject[] = [
     industry: 'Education Consultancy',
   },
   {
-    id: 'udef-cms',
-    name: 'UDEF CMS',
+    id: 'aesthera-crm',
+    name: 'Aesthera CRM',
     description: 'Custom consultancy CRM built specifically for education sector consultancy workflows.',
-    url: 'https://crm.aesthera.com.np/',
-    category: 'CRM/Business',
-    industry: 'Education Consultancy',
+    url: 'https://crm.aesthera.tech/',
+    category: 'CRM',
+    industry: 'Proprietary',
+    featured: true
+  },
+  {
+    id: 'gym-dai',
+    name: 'Gym Dai',
+    description: 'Gym and fitness management system.',
+    url: 'https://gymo.aesthera.tech/',
+    category: 'CRM',
+    industry: 'Proprietary',
+    featured: true
   },
   {
     id: 'fairmount-education',
@@ -78,7 +88,7 @@ export const clientProjects: ClientProject[] = [
     description: 'Computer education and training institute.',
     url: 'https://educationzone.com.np/',
     category: 'Education',
-    industry: 'Education',
+    industry: 'Educational Institution',
   },
   {
     id: 'nepalese-handicrafts',
@@ -92,7 +102,7 @@ export const clientProjects: ClientProject[] = [
     id: 'dreamfly-education-consultancy',
     name: 'Dreamfly Education Consultancy',
     description: 'Expert education consultancy services for international student placements and abroad education.',
-    url: 'https://dreamflyedu.com/',
+    url: 'https://dreamflyeducation.com/',
     category: 'Education',
     industry: 'Education Consultancy',
   },
